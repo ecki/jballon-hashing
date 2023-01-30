@@ -13,7 +13,7 @@ import java.util.Base64;
 import java.util.Objects;
 import java.util.concurrent.ForkJoinPool;
 
-import src.main.java.net.eckenfels.jballoon.impl.BalloonEngine;
+import net.eckenfels.jballoon.impl.BalloonEngine;
 
 /**
  * PublicAPI class for the jBalloon password hashing library.

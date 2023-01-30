@@ -12,7 +12,7 @@ The code is Copyright 2023 Bernd Eckenfels, Germany. It is released under the Ap
 
 ## Compiling
 
-You should be able to run `mvn verify` to build and test the code.
+You should be able to run `mvn verify` to build and test the code. Minimum Java version to compile and run is Java 11.
 
 ## Usage
 
