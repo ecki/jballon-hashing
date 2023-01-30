@@ -1,7 +1,7 @@
 /* jballoon-hashing
- * 
+ *
  * Copyright 2023 by Bernd Eckenfels. Germany.
- * 
+ *
  * Granted under Apache License 2.0.
  */
 package net.eckenfels.jballoon;
@@ -13,7 +13,7 @@ import java.util.Base64;
 import java.util.Objects;
 import java.util.concurrent.ForkJoinPool;
 
-import net.eckenfels.jballoon.impl.BalloonEngine;
+import src.main.java.net.eckenfels.jballoon.impl.BalloonEngine;
 
 /**
  * PublicAPI class for the jBalloon password hashing library.
@@ -44,7 +44,7 @@ public final class BalloonHash
 		/**
 		 * Use default params.
 		 * <p>
-		 * This will specify t=0, s=0, p=1 TODO.
+		 * This will specify t=1, s=1024(1M), p=1 TODO.
 		 * <p>
 		 * Default parameters are used by {@link BalloonHash#hash(byte[])}.
 		 *
@@ -58,7 +58,7 @@ public final class BalloonHash
 		/**
 		 * Creates new parameter object with specified parameters.
 		 *
-		 * @param s space cost in number of blocks
+		 * @param s space cost in kilobytes (rounded up to even blocks)
 		 * @oaram t time cost in number of rounds
 		 * @param p parallelity factor
 		 * TODO: hash, rng
@@ -89,24 +89,22 @@ public final class BalloonHash
 			return salt;
 		}
 
+		/** Configured space cost (in kiB) */
 		public int getSpaceCost()
 		{
 			return spaceCost;
 		}
 
+		/** Configured compute cost in function iterations. */
 		public int getTimeCost()
 		{
 			return timeCost;
 		}
 
+		/** Configured number of parallel instances executed in tasks. */
 		public int getParallelity()
 		{
 			return parallelity;
-		}
-
-		public byte[] getSalt() {
-			// TODO Auto-generated method stub
-			return null;
 		}
 	}
 
