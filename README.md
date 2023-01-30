@@ -19,15 +19,15 @@ You should be able to run `mvn verify` to build and test the code.
 The main entry is the class `net.eckenfels.jbaloon.BalloonHash`. It uses Java 8 features and requires a ForkJoinPool.
 
 ```java
-   import net.eckenfels.jballoon.BalloonHash;
+import net.eckenfels.jballoon.BalloonHash;
 
-   BalloonHash balloon = new BalloonHash();
-   BalloonResult verifier = balloon.hash("secret".getBytes(StandardCharset.UTF8);
-   System.out.println("Your hash is: " + verifier.getEncoded());
+BalloonHash balloon = new BalloonHash();
+BalloonResult verifier = balloon.hash("secret".getBytes(StandardCharset.UTF8);
+System.out.println("Your hash is: " + verifier.getEncoded());
 
-   BalloonResult verifier = BallonResult.decode("$balloon$v=1$s=1,t=2,p=3$kl7_gjs1BX_Fy0ye5S5B-nz-MxxZc0P0SIKqnkhj4Wk$06UeQMy3uWRUnPz3CudHI-uw-fg6BR0JDGkjQLn5bVM");
-   boolean result = balloon.verify("secret", verifier);
-   System.out.println("Your password was correct: " + result);
+BalloonResult verifier = BallonResult.decode("$balloon$v=1$s=1,t=2,p=3$kl7_gjs1BX_Fy0ye5S5B-nz-MxxZc0P0SIKqnkhj4Wk$06UeQMy3uWRUnPz3CudHI-uw-fg6BR0JDGkjQLn5bVM");
+boolean result = balloon.verify("secret", verifier);
+System.out.println("Your password was correct: " + result);
 ```
 
 ## See Also
