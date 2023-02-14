@@ -1,10 +1,10 @@
-# jballon-hashing
+# jballoon-hashing
 
 Java implementation of the balloon password hashing function.
 
 WARNING: This is work in progress, it is not performance optimized, security reviewed or hardened, compatibility or functional tested.
 
-GitHub Page: https://github.com/ecki/jballon-hashing
+GitHub Page: https://github.com/ecki/jballoon-hashing
 
 ## License and Author
 
@@ -16,7 +16,7 @@ You should be able to run `mvn verify` in the `wip`-branch(!) to build and test 
 
 ## Usage
 
-The main entry is the class `net.eckenfels.jbaloon.BalloonHash`. It uses Java 8 features and requires a ForkJoinPool.
+The main entry is the class `net.eckenfels.jballoon.BalloonHash`. It uses Java 8 features and requires a ForkJoinPool.
 
 ```java
 import net.eckenfels.jballoon.BalloonHash;
